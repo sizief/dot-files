@@ -27,3 +27,4 @@ set listchars=trail:~,tab:>\ ,eol:< " show special characters
 set list
 set cindent
 set shiftwidth=2
+set cursorcolumn
