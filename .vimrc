@@ -13,13 +13,16 @@ Plugin 'junegunn/fzf.vim'
 Plugin 'preservim/nerdtree'
 call vundle#end()            " required
 syntax on
-syntax enable      " enable syntax highlighting
+syntax enable                       " enable syntax highlighting
 set encoding=utf8
+
 filetype plugin indent on    " required
 let g:airline#extensions#tabline#enabled = 1
+
 map gn :bn<cr>
 map gp :bp<cr>
 map gd :bd<cr>
+
 color default
 colorscheme dracula
 
@@ -33,6 +36,7 @@ set list
 set cindent
 set shiftwidth=2
 set cursorcolumn
+set ma
 
 " Change buffer without saving
 set hidden
@@ -40,4 +44,4 @@ set hidden
 " Map Tab to switch buffers
 nnoremap  <silent>   <tab>  :if &modifiable && !&readonly && &modified <CR> :write<CR> :endif<CR>:bnext<CR>
 nnoremap  <silent> <s-tab>  :if &modifiable && !&readonly && &modified <CR> :write<CR> :endif<CR>:bprevious<CR>
-
+nnoremap <Leader>\ :w<cr>
